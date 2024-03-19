@@ -8,12 +8,13 @@ from .models import Chat
 
 from django.utils import timezone
 
-openai_api_key = 'YOUR_API_KEY' # Replace YOUR_API_KEY with your openai apikey 
+openai_api_key = "YOUR_API_KEY" # Replace YOUR_API_KEY with your openai apikey 
+print(f"API KEY: ${openai_api_key}")
 openai.api_key = openai_api_key 
 
 def ask_openai(message):
     response = openai.ChatCompletion.create(
-        model = "gpt-3.5-turbo-16k-0613",
+        model = "gpt-4",
         # prompt = message,
         # max_tokens=150,
         # n=1,
